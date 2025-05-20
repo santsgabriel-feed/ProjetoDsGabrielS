@@ -47,17 +47,15 @@ CREATE TABLE `cliente` (
 -- Estrutura da tabela `produto`
 --
 
-DROP TABLE IF EXISTS `produto`;
-CREATE TABLE `produto` (
-  `abertura de conta` varchar(20) NOT NULL,
-  `gerenciamento de conta` varchar(20) NOT NULL,
-  `aconselhamento financeiro` varchar(20) NOT NULL,
-  `atendimento ao publico` varchar(20) NOT NULL,
-  `seguros` int(11) NOT NULL,
-  `planos de previdência` int(11) NOT NULL,
-  `investimento` int(11) NOT NULL,
-  `consórcios` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS `conta`;
+CREATE TABLE `conta` (
+  NumConta varchar(15) NOT NULL primary key,
+  dataAbertura date NOT NULL,
+  saldo double(7,2) ,
+  tipo varchar(15) not null,
+  limite double (6,2) ,
+  dataRendimento date,
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
